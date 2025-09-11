@@ -1,0 +1,2 @@
+# stickerapp
+React Native photo
