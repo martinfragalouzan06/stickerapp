@@ -8,4 +8,3 @@ const TabLayout = () => (
   );
 
 export default TabLayout;
-
