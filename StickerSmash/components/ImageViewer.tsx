@@ -3,10 +3,14 @@ import { Image } from 'expo-image';
 
 type Props = {
   imgSource: ImageSourcePropType;
+  selectedImage?: string;
 };
 
-const ImageViewer = ({ imgSource }: Props) => 
-<Image source={imgSource} style={styles.image} />;
+const ImageViewer = ({ imgSource, selectedImage }: Props) => {
+  const imageSource = selectedImage ? { uri: selectedImage } : imgSource;
+
+  return <Image source={imageSource} style={styles.image} />;
+}
 
 const styles = StyleSheet.create({
   image: {
@@ -16,4 +20,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ImageViewer;
+ export default ImageViewer;
